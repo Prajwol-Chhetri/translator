@@ -5,7 +5,7 @@ try:
     # creating an instance of Translator class
     translator = Translator()
     # opening essay as file
-    with io.open('./essay.txt', mode='r', encoding="utf-8") as file:
+    with io.open('./text.txt', mode='r', encoding="utf-8") as file:
         # converting the words in essay file into list and storing it in lines
         lines = file.readlines()
         for line in lines:
@@ -18,5 +18,3 @@ except FileNotFoundError:
     print('File not found')
 except UnicodeEncodeError as err:
     print('Unicode Encode Error')
-
-
